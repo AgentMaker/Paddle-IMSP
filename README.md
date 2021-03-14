@@ -17,6 +17,7 @@ $ pip install paddleimsp==1.0.0 -i https://pypi.python.org/pypi
 from imsp import IMSP
 
 # Load the engine
+# The first load will automatically download the pretrained model and images database
 imsp_engine = IMSP()
 ```
 ```python
