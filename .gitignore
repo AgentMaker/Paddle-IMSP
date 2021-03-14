@@ -127,3 +127,11 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Work
+.paddleimsp.egg-info/
+paddleimsp.egg-info/
+.dist/
+dist/
+.build/
+build/

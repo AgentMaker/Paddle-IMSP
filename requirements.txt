@@ -1,0 +1,3 @@
+paddleclip
+paddlepaddle>=2.0.1
+# paddlepaddle-gpu>=2.0.1
