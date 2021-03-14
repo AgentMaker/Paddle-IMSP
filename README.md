@@ -1,5 +1,5 @@
 # Paddle-IMSP
-Paddle Image Search and Pair. 
+An Image Search and Pair system base on PaddlePaddle.
 
 Search Web Image by text and pair similar images by image.
 
