@@ -5,6 +5,18 @@ Search Web Image by text and pair similar images by image.
 
 Base project：[【Paddle-CLIP】](https://github.com/AgentMaker/Paddle-CLIP).
 
+## Project Information
+* This project is limited to non-commercial scenarios
+
+* All the retrieved and matched web images are from the website: [【unsplash】](https://unsplash.com/)
+
+* If you need to use the original image, please move to [【unsplash】](https://unsplash.com/) Download
+
+* Thanks to [【unsplash】](https://unsplash.com/data) open source large-scale image dataset
+
+* Thanks to [【openai/CLIP】](https://github.com/openai/CLIP/) open source model code and pretrained model parameters
+
+
 ## Install Package
 * Install by pip：
 ```shell
