@@ -24,6 +24,8 @@ imsp_engine = IMSP()
 # You can use Chinese or English
 photo_urls = imsp_engine.im_search('sky')
 ```
+Preview photos:
+
 <img src="https://unsplash.com/photos/OnGV9X-ql08/download?w=224"/>
 
 Original image：<a target="_blank" href="https://unsplash.com/photos/OnGV9X-ql08">Unsplash Link</a> 
@@ -39,6 +41,8 @@ Original image：<a target="_blank" href="https://unsplash.com/photos/7dF1FloGPp
 # Pair similar images by image
 photo_urls = imsp_engine.im_pair('fruit.jpg')
 ```
+Preview photos:
+
 <img src="https://unsplash.com/photos/pnvA8iLJcDI/download?w=224"/>
 
 Original image：<a target="_blank" href="https://unsplash.com/photos/pnvA8iLJcDI">Unsplash Link</a> 
