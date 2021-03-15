@@ -76,6 +76,8 @@ Original image：<a target="_blank" href="https://unsplash.com/photos/7YFfGE26kb
 # Use the images and texts to search and pair images
 photo_urls = imsp_engine.im_search_pair(images=['road.jpg'], texts=['cars', 'peoples'], topk=5)
 ```
+Preview photos:
+
 <img src="https://unsplash.com/photos/6FpUtZtjFjM/download?w=224"/>
 
 Original image：<a target="_blank" href="https://unsplash.com/photos/6FpUtZtjFjM">Unsplash Link</a>
