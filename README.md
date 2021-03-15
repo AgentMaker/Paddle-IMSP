@@ -24,7 +24,7 @@ Base project：[【Paddle-CLIP】](https://github.com/AgentMaker/Paddle-CLIP).
 ## Install Package
 * Install by pip：
 ```shell
-$ pip install paddleimsp==1.0.0 -i https://pypi.python.org/pypi 
+$ pip install paddleimsp
 ```
 * Install by wheel package：[【Releases Packages】](https://github.com/AgentMaker/Paddle-IMSP/releases)
 
