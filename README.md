@@ -71,3 +71,19 @@ Original image：<a target="_blank" href="https://unsplash.com/photos/fBn-JJk_V_
 <img src="https://unsplash.com/photos/7YFfGE26kbs/download?w=224"/>
 
 Original image：<a target="_blank" href="https://unsplash.com/photos/7YFfGE26kbs">Unsplash Link</a> 
+
+```python
+# Use the images and texts to search and pair images
+photo_urls = imsp_engine.im_search_pair(images=['road.jpg'], texts=['cars', 'peoples'], topk=5)
+```
+<img src="https://unsplash.com/photos/6FpUtZtjFjM/download?w=224"/>
+
+原图请点击：<a target="_blank" href="https://unsplash.com/photos/6FpUtZtjFjM">Unsplash Link</a>
+
+<img src="https://unsplash.com/photos/-6XDz7LiBxw/download?w=224"/>
+
+原图请点击：<a target="_blank" href="https://unsplash.com/photos/-6XDz7LiBxw">Unsplash Link</a>
+
+<img src="https://unsplash.com/photos/U6j3dsF_rMY/download?w=224"/>
+
+原图请点击：<a target="_blank" href="https://unsplash.com/photos/U6j3dsF_rMY">Unsplash Link</a>

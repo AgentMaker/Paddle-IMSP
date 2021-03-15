@@ -1,4 +1,5 @@
 import os
+import time
 import wget
 import paddle
 from PIL import Image
@@ -67,6 +68,60 @@ class IMSP:
 
         logit_scale = self.model.logit_scale.exp()
         logits = logit_scale * image_features @ self.image_features.t()
+
+        indexs = logits.topk(topk)[1][0]
+        photo_ids = [self.photo_ids[index] for index in indexs]
+
+        if return_urls:
+            return self.get_urls(photo_ids)
+        else:
+            return photo_ids
+
+    def im_search_pair(self, images=None, texts=None, topk=5, return_urls=True):
+        if images is not None:
+            if isinstance(images, list):
+                input_images = []
+                for image in images:
+                    image = Image.open(image)
+                    image = self.transforms(image).unsqueeze(0)
+                    input_images.append(image)
+                input_images = paddle.concat(input_images)
+            elif isinstance(images, str):
+                input_images = Image.open(images)
+                input_images = self.transforms(input_images).unsqueeze(0)
+
+            with paddle.no_grad():
+                image_features = self.model.encode_image(input_images)
+
+        if texts is not None:
+            if isinstance(texts, list):
+                input_texts = []
+                for text in texts:
+                    if self.is_chinese(text):
+                        input_texts.append(self.translator.translate(text))
+                        time.sleep(1)
+                    else:
+                        input_texts.append(text)
+            elif isinstance(texts, str):
+                if self.is_chinese(texts):
+                    input_texts = self.translator.translate(texts)
+                else:
+                    input_texts = texts
+            input_texts = tokenize(input_texts)
+
+            with paddle.no_grad():
+                text_features = self.model.encode_text(input_texts)
+
+        if images and texts:
+            features = paddle.concat([image_features, text_features], 0)
+            features = paddle.sum(features, axis=0, keepdim=True)
+        elif images:
+            features = paddle.sum(image_features, axis=0, keepdim=True)
+        elif texts:
+            features = paddle.sum(text_features, axis=0, keepdim=True)
+
+        logit_scale = self.model.logit_scale.exp()
+        logits = logit_scale * features @ self.image_features.t()
 
         indexs = logits.topk(topk)[1][0]
         photo_ids = [self.photo_ids[index] for index in indexs]
