@@ -1,4 +1,8 @@
 # Paddle-IMSP
+![GitHub forks](https://img.shields.io/github/forks/AgentMaker/Paddle-IMSP)
+![GitHub Repo stars](https://img.shields.io/github/stars/AgentMaker/Paddle-IMSP)
+![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/AgentMaker/Paddle-IMSP?include_prereleases)
+![GitHub](https://img.shields.io/github/license/AgentMaker/Paddle-IMSP)  
 An Image Search and Pair system base on PaddlePaddle.
 
 Search Web Image by text and pair similar images by image.
